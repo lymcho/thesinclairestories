@@ -207,6 +207,49 @@
       opacity: 0.5;
     }
 
+    /* --- AUTHORS --- */
+    .authors-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 640px;
+      gap: 1.5rem;
+    }
+
+    .author-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.8rem;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .author-card:hover {
+      border-color: var(--amber-dim);
+      transform: translateY(-2px);
+    }
+
+    .author-name {
+      font-family: var(--serif);
+      color: var(--text-bright);
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .author-role {
+      color: var(--amber);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .author-bio {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin: 0;
+    }
+
     /* --- FEATURED --- */
     .featured-card {
       display: grid;
@@ -357,6 +400,9 @@
 
     /* --- RESPONSIVE --- */
     @media (max-width: 700px) {
+      .authors-grid {
+        grid-template-columns: 1fr;
+      }
       .featured-card {
         grid-template-columns: 1fr;
       }
@@ -400,6 +446,24 @@
       sound design, and atmospheric presentation. No recycled content. No algorithms.
       Just carefully built fiction meant to unsettle — on the page and in your headphones.
     </p>
+    <div class="divider"></div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section id="authors">
+    <p class="section-label">Author</p>
+    <h2 class="section-title">Meet the voice behind The Sinclaire Stories.</h2>
+    <div class="authors-grid">
+      <article class="author-card">
+        <h3 class="author-name">L. DzSinclair</h3>
+        <p class="author-role">Author</p>
+        <p class="author-bio">
+          L. DzSinclair writes literary suspense rooted in emotional realism, fractured trust,
+          and morally complex characters. Each story is built as an immersive, slow-burn experience
+          designed to linger long after the final chapter.
+        </p>
+      </article>
+    </div>
     <div class="divider"></div>
   </section>
 
