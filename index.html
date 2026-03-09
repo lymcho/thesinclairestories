@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Sinclaire Stories — Novels & Audiobooks</title>
-  <meta name="description" content="Dark literary fiction by L.Z. Sinclaire in both novel and audiobook form. Enter The Sinclaire Stories.">
+  <title>The Sinclaire Stories — Original Audio Fiction</title>
+  <meta name="description" content="Dark literary fiction, narrated and produced by L.Z. Sinclaire. Five original stories — from Lincoln Park to Chinatown to the Gold Coast.">
   <meta property="og:title" content="The Sinclaire Stories">
   <meta property="og:description" content="Dark literary fiction by L.Z. Sinclaire, available as novels and audiobooks.">
   <meta property="og:image" content="assets/cover.jpeg">
@@ -54,7 +54,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('assets/seriescover.png') center/cover no-repeat;
+      background: url('assets/brand01.jpg') center/cover no-repeat;
       filter: brightness(0.35) saturate(0.7);
       transform: scale(1.05);
       transition: transform 20s ease;
@@ -262,6 +262,8 @@
       transition: border-color 0.3s;
     }
 
+    .featured-card + .featured-card { margin-top: 2.5rem; }
+
     .featured-card:hover { border-color: var(--amber-dim); }
 
     .featured-image {
@@ -286,6 +288,31 @@
       text-transform: uppercase;
       color: var(--amber);
       margin-bottom: 0.75rem;
+    }
+
+    .featured-info .status-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+
+    .status-badge.streaming {
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      background: rgba(74, 222, 128, 0.08);
+    }
+
+    .status-badge.production {
+      color: var(--amber);
+      border: 1px solid rgba(200, 164, 90, 0.3);
+      background: var(--amber-glow);
     }
 
     .featured-info h3 {
@@ -343,6 +370,226 @@
       height: 14px;
       fill: currentColor;
     }
+
+    /* --- AUTHOR --- */
+    .author-section { text-align: center; }
+    .author-section .divider { margin: 0 auto 4rem; }
+
+    .author-name {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 1rem;
+    }
+
+    .author-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--amber);
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .author-bio {
+      font-size: 0.92rem;
+      color: var(--text);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+
+    .author-contact {
+      display: flex;
+      justify-content: center;
+    }
+
+    .author-contact .listen-link svg {
+      fill: none;
+    }
+
+    /* --- UPCOMING --- */
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .upcoming-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: border-color 0.3s;
+    }
+
+    .upcoming-card:hover { border-color: var(--amber-dim); }
+
+    .upcoming-card .tag {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.75rem;
+    }
+
+    .upcoming-card h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .upcoming-card .meta {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .upcoming-card p {
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* --- SUBSCRIBE CTA --- */
+    .subscribe-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .subscribe-cta .hero-cta,
+    .btn-subscribe {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.8rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text);
+      background: transparent;
+      text-decoration: none;
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-subscribe:hover {
+      border-color: #ff0000;
+      color: #ff0000;
+      background: rgba(255, 0, 0, 0.06);
+    }
+
+    .btn-subscribe svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* --- MODAL --- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(10, 9, 8, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 3rem;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal {
+      transform: translateY(0);
+    }
+
+    .modal-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber-dim);
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 1rem;
+    }
+
+    .modal-email {
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--amber);
+      letter-spacing: 0.05em;
+      padding: 1rem;
+      background: rgba(200, 164, 90, 0.06);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      margin-bottom: 1rem;
+      user-select: all;
+    }
+
+    .modal-note {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover { color: var(--text-bright); }
+
+    .modal { position: relative; }
 
     /* --- FOOTER --- */
     footer {
@@ -409,6 +656,9 @@
       .featured-image { min-height: 200px; }
       .featured-info { padding: 1.5rem; }
       section { padding: 4rem 1.5rem; }
+      .upcoming-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -421,8 +671,8 @@
     <div class="hero-content">
       <p class="hero-label">Novels & Audiobooks</p>
       <h1 class="hero-title">The Sinclaire Stories</h1>
-      <p class="hero-subtitle">Dark literary fiction by L.Z. Sinclaire, available to read and listen</p>
-      <a href="#featured" class="hero-cta">
+      <p class="hero-subtitle">Dark literary fiction, narrated and produced by L.Z. Sinclaire</p>
+      <a href="https://youtube.com/playlist?list=PL_IvFkOdjqGM25f_J5oPMEu9k0sxKrdsa" class="hero-cta" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
         Explore the Stories
       </a>
@@ -442,11 +692,17 @@
       produced as cinematic audiobook experiences.
     </p>
     <p>
-      Every title is crafted from the ground up: from manuscript to audiobook narration,
-      sound design, and atmospheric presentation. No recycled content. No algorithms.
-      Just carefully built fiction meant to unsettle — on the page and in your headphones.
+      Each story is written, narrated, and produced from scratch — manuscript to 
+      final mix. Voice, score, silence, all placed by hand. The kind of fiction 
+      that sounds like it's sitting too close.
     </p>
-    <div class="divider"></div>
+    <div class="subscribe-cta">
+      <a href="https://youtube.com/playlist?list=PL_IvFkOdjqGM25f_J5oPMEu9k0sxKrdsa" class="btn-subscribe" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.1.2 7.1.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.6 15.4V8.1l6.3 3.7-6.3 3.6z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+    <div class="divider" style="margin-top:3rem;"></div>
   </section>
 
   <!-- AUTHORS -->
@@ -469,11 +725,13 @@
 
   <!-- FEATURED -->
   <section id="featured">
-    <p class="section-label">Now Available</p>
+    <p class="section-label">Now Streaming</p>
+
     <div class="featured-card">
-      <img src="assets/cover.jpeg" alt="The Basement Tenant — Cover Art" class="featured-image" loading="lazy">
+      <img src="assets/the_basement_tenant_cover.jpg" alt="The Basement Tenant — Cover Art" class="featured-image" loading="lazy">
       <div class="featured-info">
-        <p class="tag">Psychological Thriller &bull; Novel + Audiobook</p>
+        <span class="status-badge streaming">Now Streaming</span>
+        <p class="tag">Psychological Thriller &bull; 25 Chapters &bull; Lincoln Park, Chicago</p>
         <h3>The Basement Tenant</h3>
         <p class="author">by L.Z. Sinclaire</p>
         <p>
@@ -482,11 +740,11 @@
           her world starts to unravel. Set in Lincoln Park, Chicago, in the dead of winter.
         </p>
         <div class="listen-links">
-          <a href="https://www.amazon.com/s?k=%22The+Basement+Tenant%22+%22L.Z.+Sinclaire%22&i=digital-text" class="listen-link" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75zM6.5 8.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 .8.4l4-3a.5.5 0 0 0 0-.8l-4-3a.5.5 0 0 0-.3-.1zM13 9a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-4zm0 4a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-4z"/></svg>
-            Kindle eBook
+          <a href="https://www.amazon.com/Basement-Tenant-L-Z-Sinclaire-ebook/dp/B0GRJS52KZ" class="listen-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M1.04 17.52q.1-.16.32-.02 3.78 2.84 8.56 2.84 3.46 0 7.1-1.68.46-.2.62.22.16.44-.26.72Q14 22 9.56 22q-4.86 0-8.52-2.84-.26-.2 0-.64zm10.7-1.8q-.26.32-.52.06-.9-.74-.9-2.26V8.52q0-1.94 1.38-2.88 2.12-1.42 4.7-1.42.52 0 1.18.08 1.44.18 2.06.42.2.06.18.52l-.12 1.44q-.02.26-.26.24-.04-.02-.12-.06-.74-.44-2.1-.62-.34-.04-.64-.04-1.56 0-2.46.82-.7.64-.7 2.08v5.24q0 1.12.82 2.08.18.2-.5.32z"/></svg>
+            Amazon
           </a>
-          <a href="#" class="listen-link">
+          <a href="https://youtube.com/playlist?list=PL_IvFkOdjqGM25f_J5oPMEu9k0sxKrdsa" class="listen-link" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0zM10 8l6 4-6 4V8z"/></svg>
             YouTube
           </a>
@@ -497,6 +755,98 @@
         </div>
       </div>
     </div>
+
+    <div class="featured-card">
+      <img src="assets/the_sublet_cover.jpg" alt="The Sublet — Cover Art" class="featured-image" loading="lazy">
+      <div class="featured-info">
+        <span class="status-badge production">In Production</span>
+        <p class="tag">Psychological Thriller &bull; 28 Chapters &bull; Chinatown, New York</p>
+        <h3>The Sublet</h3>
+        <p class="author">by L.Z. Sinclaire</p>
+        <p>
+          A pre-med scholarship student from Queens lands a miracle summer sublet
+          in a sprawling Chinatown loft. The romance is fast, consuming, and — she
+          thinks — proof she can finally have a life beyond survival. Then the seams show:
+          a pregnant woman who vanishes, unmarked pills, and a doctor who knows her chart
+          before meeting her.
+        </p>
+        <div class="listen-links">
+          <a href="#" class="listen-link" style="pointer-events: none; opacity: 0.4;">
+            <svg viewBox="0 0 24 24"><path d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0zM10 8l6 4-6 4V8z"/></svg>
+            YouTube — Coming Soon
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="author-section" id="author">
+    <div class="divider"></div>
+    <p class="section-label">The Author</p>
+    <h2 class="author-name">L.Z. Sinclaire</h2>
+    <p class="author-tagline">Psychological and domestic thrillers about women caught in beautiful traps — of privilege, obsession, and desire.</p>
+    <p class="author-bio">
+      Her Sinclaire Stories are sharp, character-driven suspense novels where the
+      scariest dangers aren't monsters in the dark, but the elegant systems and
+      relationships that quietly close in around her characters. From Lincoln Park
+      brownstones to Chinatown sublets, Gold Coast high-rises to Seattle tech lofts —
+      each story is written, narrated, and produced from the ground up.
+    </p>
+    <div class="author-contact">
+      <button onclick="document.getElementById('contact-modal').classList.add('active')" class="listen-link" style="cursor:pointer; background:none;">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        Contact Publisher
+      </button>
+      <a href="https://youtube.com/playlist?list=PL_IvFkOdjqGM25f_J5oPMEu9k0sxKrdsa" class="btn-subscribe" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C17 2.6 12 2.6 12 2.6s-5 0-8.3.3c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S.2 8.1.2 10v1.8c0 1.9.3 3.8.3 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.1.2 7.1.2s5 0 8.3-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.6 15.4V8.1l6.3 3.7-6.3 3.6z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+  </section>
+
+  <!-- COMING SOON -->
+  <section id="coming-soon">
+    <p class="section-label">Coming Soon</p>
+    <h2 class="section-title">More stories on the way.</h2>
+    <div class="upcoming-grid">
+
+      <div class="upcoming-card">
+        <p class="tag">Postpartum Gothic &bull; Chicago</p>
+        <h3>The Night Nanny</h3>
+        <p class="meta">22 Chapters &bull; Gold Coast, Chicago</p>
+        <p>
+          After a difficult birth, Eleanor Voss's mother-in-law insists on
+          hiring a night nanny. But the agency has no record of Maris, and
+          security footage shows Eleanor herself coming and going at hours
+          she doesn't remember.
+        </p>
+      </div>
+
+      <div class="upcoming-card">
+        <p class="tag">Psychological Sci-Fi &bull; Seattle</p>
+        <h3>The Second Wife</h3>
+        <p class="meta">24 Chapters &bull; Capitol Hill, Seattle</p>
+        <p>
+          A cognitive therapist discovers she is an embodied AI — built from
+          her partner's dead wife's memories and deployed into that woman's
+          life. Her feelings are real. Her origin story is a build log.
+        </p>
+      </div>
+
+      <div class="upcoming-card">
+        <p class="tag">Tech Thriller &bull; San Francisco</p>
+        <h3>The Good Engineer</h3>
+        <p class="meta">26 Chapters &bull; San Francisco</p>
+        <p>
+          When a billion-dollar lawsuit hits her AI startup, senior PM
+          Evelyn Park is pulled into an investigation — and realizes the
+          company's flagship model has been profiling employees like her
+          as assets to exploit.
+        </p>
+      </div>
+
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -504,12 +854,33 @@
     <div class="footer-inner">
       <p class="footer-brand">The Sinclaire Stories</p>
       <nav class="footer-links">
+        <a href="https://youtube.com/playlist?list=PL_IvFkOdjqGM25f_J5oPMEu9k0sxKrdsa" target="_blank" rel="noopener">YouTube</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('contact-modal').classList.add('active')">Contact</a>
         <a href="privacy/">Privacy Policy</a>
         <a href="terms/">Terms of Service</a>
       </nav>
       <p class="footer-copy">&copy; 2026 L.Z. Sinclaire. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal-overlay" id="contact-modal" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="modal">
+      <button class="modal-close" onclick="document.getElementById('contact-modal').classList.remove('active')">&times;</button>
+      <p class="modal-label">Publisher</p>
+      <h3 class="modal-title">Homelab Music</h3>
+      <p class="modal-email">hi[at]homelabmusic.com</p>
+      <p class="modal-note">For press, licensing, collaboration, or general inquiries.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('contact-modal').classList.remove('active');
+      }
+    });
+  </script>
 
 </body>
 </html>
